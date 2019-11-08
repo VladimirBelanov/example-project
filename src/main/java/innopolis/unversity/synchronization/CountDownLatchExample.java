@@ -1,4 +1,4 @@
-package innopolis.unversity.multithreading;
+package innopolis.unversity.synchronization;
 
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CountDownLatch;

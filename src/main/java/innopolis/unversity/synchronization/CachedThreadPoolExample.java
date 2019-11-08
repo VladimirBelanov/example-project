@@ -1,23 +1,23 @@
-package innopolis.unversity.multithreading;
+package innopolis.unversity.synchronization;
 
-import java.time.LocalDateTime;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-public class FixedThreadPoolExample {
+public class CachedThreadPoolExample {
     public static void main(String[] args) {
-        ExecutorService fixedThreadPool = Executors.newFixedThreadPool(5);
+        ExecutorService cachedTP = Executors.newCachedThreadPool();
+
         for (int i = 0; i < 10; i++) {
-            fixedThreadPool.execute(() -> {
+            cachedTP.execute(() -> {
                 try {
-                    TimeUnit.SECONDS.sleep(2);
+                    TimeUnit.SECONDS.sleep(1);
                     System.out.println(Thread.currentThread().getName());
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             });
         }
-        fixedThreadPool.shutdown();
+        cachedTP.shutdown();
     }
 }

@@ -1,4 +1,4 @@
-package innopolis.unversity.multithreading;
+package innopolis.unversity.synchronization;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
